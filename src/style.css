@@ -1,0 +1,196 @@
+.russo-text {
+  font-family: 'Russo One', sans-serif;
+  color: white;
+}
+
+#site {
+  min-height: 100vh;
+  max-height: 100vh;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.logo {
+  font-family: 'Russo One', sans-serif;
+  font-size: 2rem;
+  letter-spacing: 0.5rem;
+  cursor: pointer;
+}
+
+.menu {
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.menu a:hover {
+  color: #ffd15c;
+}
+
+.menu div:hover, .link-icon {
+  color: #ffd15c;
+}
+
+.orange {
+  color: #ffd15c;
+}
+
+.link-icon {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.link-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.link-active {
+  color: #ffd15c !important;
+}
+
+.copy {
+  text-align: center;
+  color: gray;
+  margin-top: 20vh;
+  font-size: 0.8rem;
+}
+
+.copy p {
+  padding: 0;
+  margin: 0;
+}
+
+.Content {
+  min-height: 100vh;
+  max-height: 100vh;
+  overflow: auto;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.div100 {
+  min-height: 100vh;
+  font-size: 5rem;
+  text-align: center;
+  vertical-align: center;
+}
+
+.content-home {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.init-screen {
+  font-size: 3vw;
+  color: ghostwhite;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.home {
+  background-image: url("./pattern.png");
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: default;
+}
+
+.home-avatar {
+  border-radius: 50%;
+  margin: 5vh;
+}
+
+.home-h1 {
+  letter-spacing: 10%;
+}
+
+.home-button {
+  border-radius: 1rem !important;
+  font-family: 'Russo One', sans-serif;
+  padding: 1vh 2vh !important;
+  font-size: 1.2rem;
+  font-weight: lighter;
+  width: 10vw;
+}
+
+.home-typewrite {
+  margin: 0 !important;
+}
+
+.languages {
+  margin: 1vh !important;
+}
+
+.languages * {
+  margin: 1rem;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.languages *:hover {
+  color: #ffd15c;
+}
+
+.home-scroll-down {
+  color: azure;
+}
+
+.about {
+  margin: 10vh;
+  margin-left: 20vh;
+}
+
+h1 {
+  font-family: 'Russo One', sans-serif;
+  cursor: default;
+}
+
+.about-me {
+  border-radius: 40px !important;
+  font-weight: 600;
+}
+
+.progress {
+  height: 0.8rem !important;
+}
+/*# sourceMappingURL=style.css.map */
