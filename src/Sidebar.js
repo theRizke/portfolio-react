@@ -16,7 +16,7 @@ const Sidebar = () => {
             <div className="copy">
                 <p>davidriz.hu</p>
                 <p>Developed in React</p>
-                <p>Github</p>
+                <p><a className="text-info" href="https://github.com/theRizke/portfolio-react" target="_blank">Github</a></p>
             </div>
 
         </div>
