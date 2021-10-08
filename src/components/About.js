@@ -14,9 +14,9 @@ const About = () => {
             <div className="d-flex flex-column flex-xl-row col-12 col-xl-9 bg-success p-3 m-1 p-xl-4 m-xl-5 border border-5 border-info shadow-md about-me">
                 <div className="col-12 col-xl-7 m-2 p-2 justify-content-between">
                     <div className="text-justify p-2" style={{ textAlign: "justify" }}>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rutrum efficitur interdum.
-                        Donec eu augue in turpis condimentum facilisis. Mauris a egestas felis.
-                        Vivamus tellus sem, egestas ac hendrerit quis, facilisis in nunc.
+                        Hi, my name is David. I am a passionate beginner in the field of frontend programming. 
+                        My main programming languages are React.js and JavaScript. 
+                        I am currently learning Backend Development, and i am open for an opportunity to learn and grow professionally in a company where I can be a valueable team member.
                     </div>
                     <div className="d-flex justify-content-center d-xl-block p-3">
                         <Button className="home-button text-white" variant="danger">Download CV</Button>
@@ -25,7 +25,7 @@ const About = () => {
                 <div className="col-11 col-xl-4 m-2 p-2 d-flex flex-column justify-content-between">
                     <div className="d-flex flex-column">
                         <div className="d-flex py-2 justify-content-between">
-                            <div>Development</div>
+                            <div>Frontend</div>
                             <div>75%</div>
                         </div>
                         <div><ProgressBar variant="warning" now={75}></ProgressBar></div>
@@ -33,18 +33,18 @@ const About = () => {
 
                     <div className="d-flex flex-column">
                         <div className="d-flex py-2 justify-content-between">
-                            <div>UI/UX</div>
-                            <div>50%</div>
+                            <div>Backend</div>
+                            <div>25%</div>
                         </div>
-                        <div><ProgressBar variant="danger" now={50}></ProgressBar></div>
+                        <div><ProgressBar variant="danger" now={25}></ProgressBar></div>
                     </div>
 
                     <div className="d-flex flex-column">
                         <div className="d-flex py-2 justify-content-between">
-                            <div>Photography</div>
-                            <div>20%</div>
+                            <div>Passionate for Programming</div>
+                            <div>100%</div>
                         </div>
-                        <div><ProgressBar variant="secondary" now={20}></ProgressBar></div>
+                        <div><ProgressBar variant="secondary" now={100}></ProgressBar></div>
                     </div>
 
 

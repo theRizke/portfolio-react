@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
-import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faGithub, faJsSquare, faPhp } from '@fortawesome/free-brands-svg-icons'
 import Button from "react-bootstrap/Button"
 import Modal  from "react-bootstrap/Modal";
 import ModalDialog from 'react-bootstrap/ModalDialog'
@@ -14,57 +14,58 @@ import php from '../php.jpg';
 import f1react from '../f1-react.jpg';
 import f1js from '../f1-js.jpg'
 import valorant from '../valorant.jpg'
+import Logo from '../logo.png'
 
 const Works = () => {
-
+    
     const WorkData = [
         {
-            name: "PHP tasks",
-            pic: php,
-            tags: ["php", "bootstrap"],
-            description: "Lorem ipsum dolor sit amet quo ei simul congue exerci ad nec admodum perfecto.",
-            link: "http://davidriz.hu/rendes",
-            github: "https://github.com/theRizke/php-feladatok"
+            name: "Portfolio",
+            pic: Logo,
+            tags: ["react", "sass"],
+            description: "My portfolio website.",
+            link: "https://davidriz.hu",
+            github: "https://github.com/theRizke/portfolio-react"
         },
         {
             name: "F1 TIP - REACT",
             pic: f1react,
-            tags: ["reactJS", "bootstrap", "sass", "firebase"],
-            description: "Lorem ipsum dolor sit amet quo ei simul congue exerci ad nec admodum perfecto.",
+            tags: ["react", "bootstrap", "sass", "firebase"],
+            description: "Betting competition site for Formula 1 Series. Now written in ReactJS, and using Google Firebase Firestore instead of MySQL, and Google Auth implemented aswell.",
             link: "http://davidriz.hu/tipp",
-            github: ""
+            github: "https://github.com/theRizke/f1-react"
+        },
+        {
+            name: "PHP tasks",
+            pic: faPhp,
+            tags: ["php", "bootstrap"],
+            description: "Some PHP tasks for job interview. Task 1 is the Project Euler 753 solve, Task 2 is a results simulator for Euro 2020 (using OOP), Task 3 is an easy program for counting how many Sunday was the first day of the Month since the specified date.",
+            link: "http://davidriz.hu/rendes",
+            github: "https://github.com/theRizke/php-feladatok"
         },
         {
             name: "F1 TIP - JAVASCRIPT",
             pic: f1js,
             tags: ["javascript", "php", "mysql"],
-            description: "Lorem ipsum dolor sit amet quo ei simul congue exerci ad nec admodum perfecto.",
-            link: "",
-            github: ""
+            description: "Betting competition site for Formula 1 Series. Written in  vanilla JS, PHP and MySQL. For login: teszt/teszt",
+            link: "http://davidriz.hu/f1_tipp",
+            github: "https://github.com/theRizke/f1-js"
         },
         {
             name: "VALORANT",
             pic: valorant,
             tags: ["react"],
-            description: "Lorem ipsum dolor sit amet quo ei simul congue exerci ad nec admodum perfecto.",
-            link: "##",
-            github: ""
+            description: "Valorant is a popular PC game, made by Riot. This site provides us to show every cosmetic item of the game via external API provider (valorant-api.con). The site's design tries to copy the actual game's look.",
+            link: "http://davidriz.hu/valorant",
+            github: "https://github.com/theRizke/valorant-site"
         },
         {
-            name: "Project 5",
-            pic: "https://www.goodcore.co.uk/blog/wp-content/uploads/2019/08/coding-vs-programming-2.jpg",
-            tags: ["react", "mysql"],
-            description: "Lorem ipsum dolor sit amet quo ei simul congue exerci ad nec admodum perfecto.",
+            name: "Tic-Tac-Toe",
+            pic: faJsSquare,
+            tags: ["javascript"],
+            description: "Simple Tic-Tac-Toe game, written in vanilla Javascript. Made for job interview",
             link: "",
-            github: ""
-        },
-        {
-            name: "Project 6",
-            pic: "https://www.goodcore.co.uk/blog/wp-content/uploads/2019/08/coding-vs-programming-2.jpg",
-            tags: ["react", "firebase"],
-            description: "Lorem ipsum dolor sit amet quo ei simul congue exerci ad nec admodum perfecto.",
-            link: "",
-            github: ""
+            github: "https://github.com/theRizke/tic-tac-toe"
         }
     ]
 
@@ -104,8 +105,13 @@ const Works = () => {
                 </ModalHeader>
                 <ModalBody className="bg-info">
                     <div className="d-flex flex-column align-items-center">
-                        <div className="m-2 col-10"><img className="rounded-pill" src={WorkData[currentWork].pic} width="100%"></img> </div>
-                        <div className="text-center bg-light text-dark py-3 px-1 col-10 rounded">{WorkData[currentWork].description}</div>
+                    <div className="m-2 col-10">
+                        { typeof(WorkData[currentWork].pic) == "string" ?
+                        (<img className="rounded-pill" src={WorkData[currentWork].pic} width="100%"/>)
+                        : <FontAwesomeIcon className="no-pic-work"icon={WorkData[currentWork].pic} />
+                        }
+                    </div>
+                        <div className="text-justify bg-dark text-light fw-light p-5 col-10 rounded">{WorkData[currentWork].description}</div>
                         <div className="my-3"> 
                             <a href={WorkData[currentWork].link} target="_blank"> <Button className="text-light russo-text text-uppercase" variant="danger" 
                                 disabled={WorkData[currentWork].link.length < 1 ? true : false }>Open Project</Button> </a>
@@ -127,7 +133,7 @@ const Works = () => {
                 <h1>Recent Works</h1>
             </div>
             <div className="d-flex flex-row flex-wrap filters m-2">
-                {filters.map(filter => (
+                {filters.sort().map(filter => (
                     <p className={"m-2 russo-text h6 text-capitalize filter " + ((filter == currentFilter) ? "filter-selected" : "")}
                         onClick={() => { setCurrentFilter(filter) }}>
                         {filter}
@@ -135,7 +141,7 @@ const Works = () => {
             </div>
             <div className="d-flex flex-row flex-wrap justify-content-around text-dark">
                 {WorkData.map( (work, index) =>(
-                    <div className={(currentFilter == "everything" || work.tags.includes(currentFilter) ? "d-flex" : "d-none") + (" m-1 col-12 col-md-5 col-xl-3 work-item d-flex flex-column justify-content-between align-items-center")}
+                    <div className={(currentFilter == "everything" || work.tags.includes(currentFilter) ? "d-flex" : "d-none") + (" m-1 col-12 col-md-5 col-xl-3 work-item d-flex flex-column justify-content-between align-items-center work-item")}
                             style={{backgroundImage: `url(${work.pic})`, backgroundPosition: "center"}}
                             onClick={()=>{ setCurrentWork(index); setModalShow(true)}}>
                         <div className="d-flex work-tags col-12">
@@ -144,6 +150,7 @@ const Works = () => {
                                 onClick={()=>{setCurrentFilter(tag)}}>{tag}</div>
                             ))}
                         </div>
+                        {typeof(work.pic)  == "string" ? "" : (<div className="no-pic-work"><FontAwesomeIcon icon={work.pic}></FontAwesomeIcon></div>)}
                         <div className="h4 russo-text">{work.name}</div>
                         
                     </div>

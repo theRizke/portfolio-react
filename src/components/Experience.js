@@ -7,37 +7,32 @@ const Experience = () => {
 
     const Degree = [
         {
-            title: "First",
-            year: "2021",
-            description: "Lorem ipsum dolor sit amet quo ei simul congue exerci ad nec admodum perfecto."
+            title: "Junior Java-Backend Developer",
+            year: "10.2021 -",
+            description: "GreenFox Academy"
         },
         {
-            title: "Second",
-            year: "2021",
-            description: "Lorem ipsum dolor sit amet quo ei simul congue exerci ad nec admodum perfecto."
+            title: "Technical Manager",
+            year: "2016-20",
+            description: "Obudai Egyetem - "
         },
         {
-            title: "Third",
-            year: "2021",
-            description: "Lorem ipsum dolor sit amet quo ei simul congue exerci ad nec admodum perfecto."
+            title: "Computer Science Engineering*",
+            year: "2013-14",
+            description: "Obudai Egyetem  -  (4 semester)*"
         }
     ]
 
     const Jobs = [
         {
-            title: "First",
-            year: "2021",
-            description: "Lorem ipsum dolor sit amet quo ei simul congue exerci ad nec admodum perfecto."
+            title: "Project Manager Intern",
+            year: "10.2020 - 01.2021",
+            description: "OAM Ózdi Acélművek KFT."
         },
         {
-            title: "Second",
-            year: "2021",
-            description: "Lorem ipsum dolor sit amet quo ei simul congue exerci ad nec admodum perfecto."
-        },
-        {
-            title: "Third",
-            year: "2021",
-            description: "Lorem ipsum dolor sit amet quo ei simul congue exerci ad nec admodum perfecto."
+            title: "Video Proccess Intern",
+            year: "07.2018 - 03.2021",
+            description: "Knorr-Bremse Vasúti Jármű Rendszerek Hungária Kft."
         }
     ]
 
