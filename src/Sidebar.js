@@ -1,6 +1,6 @@
 import { Link } from 'react-scroll'
 
-import Logo from './logo.png'
+import Logo from './assets/logo.png'
 import { HouseDoor, App, FilePerson, Trophy, Braces, Envelope } from 'react-bootstrap-icons';
 
 const Sidebar = () => {

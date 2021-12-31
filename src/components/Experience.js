@@ -8,18 +8,18 @@ const Experience = () => {
     const Degree = [
         {
             title: "Junior Java-Backend Developer",
-            year: "10.2021 -",
+            year: "10.2021 - 03.2022",
             description: "GreenFox Academy"
         },
         {
             title: "Technical Manager",
-            year: "2016-20",
-            description: "Obudai Egyetem - "
+            year: "2016-2020",
+            description: "Óbudai Egyetem"
         },
         {
             title: "Computer Science Engineering*",
-            year: "2013-14",
-            description: "Obudai Egyetem  -  (4 semester)*"
+            year: "2013-2014",
+            description: "Óbudai Egyetem (Four semester*)"
         }
     ]
 
@@ -27,7 +27,7 @@ const Experience = () => {
         {
             title: "Project Manager Intern",
             year: "10.2020 - 01.2021",
-            description: "OAM Ózdi Acélművek KFT."
+            description: "ÓAM Ózdi Acélművek KFT."
         },
         {
             title: "Video Proccess Intern",
@@ -57,7 +57,8 @@ const Experience = () => {
         )
     }
 
-    return (<div className="d-flex flex-column">
+    return (
+    <section className="d-flex flex-column">
         <div className="">
             <h1 className="h1">Experience</h1>
         </div>
@@ -65,7 +66,7 @@ const Experience = () => {
             {experienceData(Degree, faGraduationCap)}
             {experienceData(Jobs, faBriefcase)}
         </div>
-    </div>)
+    </section>)
 }
 
 export default Experience;

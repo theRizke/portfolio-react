@@ -77,12 +77,11 @@
 
 .div100 {
   min-height: 100vh;
-  font-size: 5rem;
   text-align: center;
   vertical-align: center;
 }
 
-.div100-2{
+.div100-2 {
   text-align: unset;
 }
 
@@ -93,7 +92,7 @@
   justify-content: center;
   align-items: center;
 
-  .scroll-div{
+  .scroll-div {
     margin-top: 10vh;
   }
 }
@@ -107,7 +106,7 @@
 }
 
 .home {
-  background-image: url("./pattern.png");
+  background-image: url("./assets/pattern.png");
   display: flex;
   justify-content: center;
   align-items: center;
@@ -137,13 +136,24 @@
 }
 
 .languages {
-  margin: 1vh !important;
-  * {
-    margin: 1rem;
-    transition: all 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem 0 !important;
+  padding: 0.5rem 5rem;
+
+  :nth-child(odd) {
+    margin-top: 1rem;
   }
-  *:hover {
-    color: #ffd15c;
+
+  .languages-row {
+    transition: all 0.2s;
+    * {
+      margin: 0.5rem;
+    }
+    *:hover {
+      color: #ffd15c;
+    }
   }
 }
 
@@ -151,6 +161,19 @@
   color: azure;
 }
 
+.hire-section{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+
+  a{
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 1.5rem !important;
+  }
+}
 
 h1 {
   font-family: "Russo One", sans-serif;
@@ -182,13 +205,13 @@ h1 {
 }
 
 @keyframes fadeIn2 {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+  from {
+    opacity: 0;
   }
+  to {
+    opacity: 1;
+  }
+}
 
 .filter {
   cursor: pointer;
@@ -224,7 +247,6 @@ h1 {
 }
 
 .work-item:hover {
-
   div {
     display: flex;
     animation-name: fadeIn2;
@@ -248,32 +270,30 @@ h1 {
   font-size: 1.5rem;
 }
 
-.contact-left{
-  background-image: url(./map-light.png);
+.contact-left {
+  background-image: url(./assets/map-light.png);
   background-repeat: no-repeat;
 }
 
-.message-area{
+.message-area {
   border-radius: 2rem !important;
 }
 
-.scroll-anim{
+.scroll-anim {
   opacity: 0;
   animation: fadeIn 2s ease 1s 5 reverse;
 }
 
-
-.exp-column{
+.exp-column {
   min-height: 40vh;
   justify-content: center;
 }
 
-.no-pic-work{
+.no-pic-work {
   display: block !important;
   justify-self: center;
   text-transform: uppercase;
-  font-size: 7rem;
-  color:#353353;
-  margin:auto
-
+  font-size: 6.5rem;
+  color: #353353;
+  margin: auto;
 }
